@@ -6,6 +6,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0 15px; /* Add padding for mobile screens */
+  box-sizing: border-box;
 }
 
 .section-container {
@@ -24,8 +26,8 @@ body {
 
 .form-control {
   width: 100%;
-  padding: 8px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -34,8 +36,8 @@ body {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 8px 15px;
-  font-size: 16px;
+  padding: 12px 18px;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -46,7 +48,7 @@ body {
 
 h1.h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 28px;
   color: #333;
 }
 
@@ -58,4 +60,69 @@ h1.h2 {
 ::placeholder {
   font-family: Arial, sans-serif;
   font-size: 14px;
+}
+
+/* Media Queries for responsiveness */
+
+/* For small devices (phones, up to 767px) */
+@media (max-width: 767px) {
+  .section-container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+
+  h1.h2 {
+    font-size: 22px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* For medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-container {
+    padding: 25px;
+  }
+
+  h1.h2 {
+    font-size: 26px;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
+}
+
+/* For large devices (laptops and desktops, 1025px and up) */
+@media (min-width: 1025px) {
+  .section-container {
+    max-width: 600px;
+  }
+
+  h1.h2 {
+    font-size: 30px;
+  }
+
+  .form-control {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 14px 20px;
+  }
 }
